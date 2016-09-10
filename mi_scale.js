@@ -19,6 +19,11 @@ class MiScale extends EventEmitter {
 
         scale.address = peripheral.address;
 
+        // Filter error responses
+        if (!peripheral.advertisement.serviceData[0]) {
+            return;
+        }
+
         // Assume only single service is available on scale.
         scale.svcUUID = peripheral.advertisement.serviceData[0].uuid;
         scale.svcData = peripheral.advertisement.serviceData[0].data;

@@ -22,7 +22,8 @@
   },
   "homepage": "https://github.com/perillamint/node-xiaomi-scale#readme",
   "dependencies": {
-    "noble": "^1.6.0"
+    "noble": "^1.6.0",
+    "request":""
   },
   "devDependencies": {
     "mocha": ""
